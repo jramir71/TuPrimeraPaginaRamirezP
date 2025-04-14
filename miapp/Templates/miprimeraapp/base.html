@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Primer Blog</title>
+</head>
+<body>
+    <h1>Bienvenido a Mi Blog</h1>
+    <nav>
+        <a href="{% url 'insertar_categoria' %}">Insertar Categoría</a> |
+        <a href="{% url 'insertar_autor' %}">Insertar Autor</a> |
+        <a href="{% url 'insertar_post' %}">Insertar Post</a> |
+        <a href="{% url 'buscar_post' %}">Buscar Post</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
