@@ -1,0 +1,16 @@
+{% extends 'miprimeraapp/base.html' %}
+
+{% block content %}
+<h2>Buscar Posts</h2>
+<form method="get">
+    <input type="text" name="q" placeholder="Buscar por título..." value="{{ query }}">
+    <button type="submit">Buscar</button>
+</form>
+<ul>
+    {% for post in resultados %}
+        <li><strong>{{ post.titulo }}</strong> - {{ post.autor }}</li>
+    {% empty %}
+        <li>No se encontraron resultados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
