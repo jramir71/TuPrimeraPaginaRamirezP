@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import CategoriaForm, AutorForm, PostForm
-from .models import Post
+from .models import Categoria, Autor, Post
 from django.db.models import Q
 
 # Create your views here.
